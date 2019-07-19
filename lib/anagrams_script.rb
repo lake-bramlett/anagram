@@ -4,7 +4,6 @@ require('dotenv/load')
 
 class UserScript < Anagram
   def initialize
-    @client = OxfordDictionary::Client.new(app_id: ENV['ID'], app_key: ENV['KEY'])
     @client = OxfordDictionary.new(app_id: ENV['ID'], app_key: ENV['KEY'])
   end
   def run_script
