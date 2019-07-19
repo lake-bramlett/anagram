@@ -1,4 +1,5 @@
 require_relative('./anagrams.rb')
+require('ruby-dictionary')
 
 while true
   p 'Enter a word or phrase'

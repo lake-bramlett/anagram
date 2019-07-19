@@ -1,9 +1,11 @@
+require('ruby-dictionary')
+
 class Anagram
   def initialize (word_1,word_2)
     @input_1 = word_1
     @input_2 = word_2
-    @word_1 = word_1.downcase.delete(' ').split('').sort
-    @word_2 = word_2.downcase.delete(' ').split('').sort
+    @word_1 = word_1.downcase.delete(' ',"'").split('').sort
+    @word_2 = word_2.downcase.delete(' ',"'").split('').sort
   end
 
   def is_word?
