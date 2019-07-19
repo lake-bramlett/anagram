@@ -11,7 +11,9 @@ _'Anagram or Antigram' is a ruby-based program that takes two user inputs and de
 ## Setup/Installation Requirements
 
 * _Clone https://github.com/lake-bramlett/anagram repo locally_
-* _In the command line, navigate to the clone repo
+* _Download personal use API key from https://developer.oxforddictionaries.com ._
+* _Insert API key in .env file as `KEY` and ID as `ID`_
+* _In the command line, navigate to the clone repo_
 * _Run `ruby lib/anagrams_script.rb` for terminal script_
 * _Use preferred text editor to edit_
 * _Make any pull requests to https://github.com/lake-bramlett/anagram ._
