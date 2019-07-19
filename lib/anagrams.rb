@@ -2,8 +2,6 @@ class Anagram
   def initialize (word_1,word_2)
     @word_1 = word_1.downcase
     @word_2 = word_2.downcase
-    p "first word: #{@word_1}"
-    p "second word: #{@word_2}"
   end
 
   def is_word?
@@ -14,10 +12,21 @@ class Anagram
     end
   end
 
+  def is_anagram?
+    if self.is_word? == true
+      if @word_1.split('').sort != @word_2.split('').sort
+        p "'#{@word_1}' and '#{@word_2}' are not anagrams"
+        false
+      end
+    else
+      p 'please enter a valid word'
+    end
+  end
+
 end
 # p 'Enter a word'
 # input_1 = gets.chomp
 # p 'Enter another word'
 # input_2 = gets.chomp
 # anagram = Anagram.new(input_1,input_2)
-# p anagram.word?
+# anagram.is_anagram?
