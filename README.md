@@ -1,6 +1,7 @@
 | Spec | Input | Output |
 |---- |:---:|----:|
-| checks to see if inputted words are valid words | 'yurb','ruby' | false,true |
+| returns false if one or more words are no valid | 'sdfs','ruby' | false |
+| returns true if both words are valid | 'goat','ruby' | true |
 | returns 'not an anagram' if two words are not anagrams | 'goat','pork'| not an anagram |
 | returns 'anagram' if two words are anagrams | 'goat','toga' | anagram |
 | returns 'antigram' if two words share none of the same letters | 'pork', 'field' | antigram |

@@ -1,9 +1,13 @@
 require('rspec')
 require('anagrams')
 
-describe('#is_word?') do
-   it("checks to see if inputted words are valid words") do
-    expect(is_word?('yurb','ruby')).to(eq(false))
+describe('#word?') do
+  it("returns false if one or more words are no valid") do
+    test_anagram = Anagram.new('sdfs','ruby')
+    expect(word?('sdfs','ruby')).to(eq(false))
+  end
+   it("returns true if both words are valid") do
+    expect(word?('goat','ruby')).to(eq(true))
   end
 end
 
