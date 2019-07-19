@@ -16,13 +16,13 @@ class Anagram
 
   def is_anagram?
     if self.is_word? == true
-      if @word_1.sort != @word_2.sort && @word_1.any? { |x| @word_2.include?(x) } == false
+      if @word_1 != @word_2 && @word_1.any? { |x| @word_2.include?(x) } == false
         p "'#{@input_1}' and '#{@input_2}' are antigrams"
         false
-      elsif @word_1.sort != @word_2.sort
+      elsif @word_1 != @word_2
         p "'#{@input_1}' and '#{@input_2}' are not anagrams"
         false
-      elsif @word_1.sort == @word_2.sort
+      elsif @word_1 == @word_2
         p "'#{@input_1}' and '#{@input_2}' are anagrams"
         true
       end
