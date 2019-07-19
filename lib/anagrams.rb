@@ -21,7 +21,7 @@ class Anagram
         letter_array.push(x)
       end
     end
-    return letter_array.join(" ")
+    return letter_array.uniq.join(" ")
   end
 
   def is_anagram?
