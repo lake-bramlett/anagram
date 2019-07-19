@@ -13,7 +13,7 @@ describe('#is_word?') do
 end
 
 describe('#is_anagram?') do
-  it("returns false' if two words are not anagrams") do
+  it("returns false if two words are not anagrams") do
     test_anagram = Anagram.new('goat','pork')
     expect(test_anagram.is_anagram?).to(eq(false))
   end
@@ -21,9 +21,10 @@ describe('#is_anagram?') do
     test_anagram = Anagram.new('goat','toga')
     expect(test_anagram.is_anagram?).to(eq(true))
   end
- #  it("returns 'antigram' if two words share none of the same letters") do
- #   expect(is_anagram?('pork','field')).to(eq('antigram'))
- # end
+  it("returns 'antigram' if two words share none of the same letters") do
+    test_anagram = Anagram.new('pork','field')
+    expect(test_anagram.is_anagram?).to(eq(false))
+ end
  #  it("returns 'anagram' or 'antigram' if two words are anagrams despite capitalization varianc") do
  #    expect(is_anagram?('goat','Toga')).to(eq('anagram'))
  #  end

@@ -14,7 +14,10 @@ class Anagram
 
   def is_anagram?
     if self.is_word? == true
-      if @word_1.split('').sort != @word_2.split('').sort
+      if @word_1.split('').sort != @word_2.split('').sort && @word_1.split('').any? { |x| @word_2.split('').include?(x) } == false
+        p "'#{@word_1}' and '#{@word_2}' are antigrams"
+        false
+      elsif @word_1.split('').sort != @word_2.split('').sort
         p "'#{@word_1}' and '#{@word_2}' are not anagrams"
         false
       elsif @word_1.split('').sort == @word_2.split('').sort
