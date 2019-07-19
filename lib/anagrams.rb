@@ -5,8 +5,8 @@ class Anagram
     p "first word: #{@word_1}"
     p "second word: #{@word_2}"
   end
-  
-  def word?
+
+  def is_word?
     if @word_1.split('').any? { |x| ['a','e','i','o','u'].include?(x) } == true && @word_2.split('').any? { |x| ['a','e','i','o','u'].include?(x) } == true
       return true
     else
