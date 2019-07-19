@@ -33,7 +33,8 @@ describe('#is_anagram?') do
     test_anagram = Anagram.new('School master','The classroom')
     expect(test_anagram.is_anagram?).to(eq(true))
   end
- #  it("returns 'antigram' for two phrases that are antigrams") do
- #    expect(is_anagram?('I am sick','get your gun')).to(eq('antigram'))
- #  end
+  it("returns false for two phrases that are antigrams") do
+    test_anagram = Anagram.new('I am sick','get your gun')
+    expect(test_anagram.is_anagram?).to(eq(false))
+  end
 end
