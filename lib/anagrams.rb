@@ -32,7 +32,7 @@ class Anagram
         p "'#{@input_1}' and '#{@input_2}' are antigrams"
         false
       elsif @word_1 != @word_2
-        p "'#{@input_1}' and '#{@input_2}' are not anagrams. However, they do share the letters: #{self.letter_match}"
+        p "'#{@input_1}' and '#{@input_2}' are not anagrams. However, they do share the letter(s): #{self.letter_match}"
         false
       elsif @word_1 == @word_2
         p "'#{@input_1}' and '#{@input_2}' are anagrams"
