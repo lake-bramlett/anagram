@@ -24,6 +24,7 @@ _'Anagram or Antigram' is a ruby-based program that takes two user inputs and de
 | returns true if both words are valid | 'goat','ruby' | true |
 | returns 'not an anagram' if two words are not anagrams | 'goat','pork'| not an anagram |
 | returns 'anagram' if two words are anagrams | 'goat','toga' | anagram |
+| returns matching letters for non-anagram results | 'one','two' | 'o' |
 | returns 'antigram' if two words share none of the same letters | 'pork', 'field' | antigram |
 | returns 'anagram' or 'antigram' if two words are anagrams despite capitalization variance | 'goat','Toga' | anagram |
 | returns 'anagram' for two phrases that are anagrams |'School master','The classroom'  | anagram |

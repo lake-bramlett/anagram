@@ -14,13 +14,23 @@ class Anagram
     end
   end
 
+  def letter_match
+    letter_array = []
+    @word_1.each do |x|
+      if @word_2.include?(x)
+        letter_array.push(x)
+      end
+    end
+    return letter_array.join(" ")
+  end
+
   def is_anagram?
     if self.is_word? == true
       if @word_1 != @word_2 && @word_1.any? { |x| @word_2.include?(x) } == false
         p "'#{@input_1}' and '#{@input_2}' are antigrams"
         false
       elsif @word_1 != @word_2
-        p "'#{@input_1}' and '#{@input_2}' are not anagrams"
+        p "'#{@input_1}' and '#{@input_2}' are not anagrams. However, they do share the letters: #{self.letter_match}"
         false
       elsif @word_1 == @word_2
         p "'#{@input_1}' and '#{@input_2}' are anagrams"

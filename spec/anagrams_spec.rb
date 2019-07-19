@@ -38,3 +38,10 @@ describe('#is_anagram?') do
     expect(test_anagram.is_anagram?).to(eq(false))
   end
 end
+
+  describe('#letter_match') do
+    it('returns matching letters for non-anagram results') do
+      test_anagram = Anagram.new('one','two')
+      expect(test_anagram.letter_match).to(eq('o'))
+    end
+  end
