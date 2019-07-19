@@ -8,6 +8,9 @@ describe('#is_word?') do
 end
 
 describe('#is_anagram?') do
+  it("returns 'not an anagram' if two words are not anagrams") do
+    expect(is_anagram?('goat','pork')).to(eq('not an anagram'))
+  end
   it("returns 'anagram' if two words are anagrams") do
     expect(is_anagram?('goat','toga')).to(eq('anagram'))
   end
@@ -17,7 +20,10 @@ describe('#is_anagram?') do
   it("returns 'anagram' or 'antigram' if two words are anagrams despite capitalization varianc") do
     expect(is_anagram?('goat','Toga')).to(eq('anagram'))
   end
-  it("returns 'anagram' or 'antigram' for two phrases") do
+  it("returns 'anagram' for two phrases that are anagrams") do
     expect(is_anagram?('School master','The classroom')).to(eq('anagram'))
+  end
+  it("returns 'antigram' for two phrases that are antigrams") do
+    expect(is_anagram?('I am sick','get your gun')).to(eq('antigram'))
   end
 end
