@@ -10,12 +10,11 @@ _'Anagram or Antigram' is a ruby-based program that takes two user inputs and de
 
 ## Setup/Installation Requirements
 
-* _Clone https://github.com/lake-bramlett/super-galactic-age-calculator repo locally_
-* _In the command line, run `npm install` for necessary dependencies_
-* _Run `npm build` (or whatever local equivalent) to compile code and build to /dist_
-* _Open /dist/index.html in preferred web browser_
+* _Clone https://github.com/lake-bramlett/anagram repo locally_
+* _In the command line, navigate to the clone repo
+* _Run `ruby lib/anagrams_script.rb` for terminal script_
 * _Use preferred text editor to edit_
-* _Make any pull requests to https://github.com/lake-bramlett/super-galactic-age-calculator ._
+* _Make any pull requests to https://github.com/lake-bramlett/anagram ._
 
 ## Specs
 |Spec|Input|Output|
